@@ -1,1 +1,8 @@
 <h1>メモ新規作成のページ</h1>
+<%= form_tag("/create") do %>
+    <%= text_field :memos ,:title, id:"form-title" %>
+    <%= text_field :memos ,:body, id:"form-content" %>
+    <%= submit_tag "Create" %>
+<% end %>
+
+
