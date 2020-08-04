@@ -9,6 +9,8 @@ class MemosController < ApplicationController
     
     def create
     #メモが新規作成ページからpostされた時のアクション
-        render plain: params["memos"]["title"] + ":" +params["memos"]["body"] 
+        Memo.create(title:params["memos"]["title"],body:params["memos"]["body"])
+        redirect_to "/"
+        #render plain: params["memos"]["title"] + ":" +params["memos"]["body"] 
     end
 end
