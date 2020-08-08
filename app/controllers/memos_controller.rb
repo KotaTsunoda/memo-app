@@ -1,6 +1,7 @@
 class MemosController < ApplicationController
     def index
     #トップページにアクセスされた時のアクション
+        @memos = Memo.all
     end
 
     def new
