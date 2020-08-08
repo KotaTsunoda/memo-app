@@ -1,14 +1,12 @@
-<div class="container">
-    <h1>メモ新規作成のページ</h1>
-    <%= form_tag("/create") do %>
-        <div class="form-group">
-            <label for="form-title">Title</label>
-            <%= text_field :memos, :title, id:"form-title", class:"form-control", placeholder:"Title" %>
+<h1>メモ新規作成のページ</h1>
+<%= form_tag("/create") do %>
+    <div class="form-group">
+        <label for="form-title">Title</label>
+        <%= text_field :memos, :title, id:"form-title", class:"form-control", placeholder:"Title" %>
         </div>
-        <div class="form-group">
-            <label for="form-content">Content</label>
-            <%= text_field :memos, :body, id:"form-content", class:"form-control", placeholder:"Content" %>
-        </div>
-        <%= submit_tag "Create", class: "btn btn-primary" %>
-    <% end %>
-</div>
+    <div class="form-group">
+        <label for="form-content">Content</label>
+        <%= text_field :memos, :body, id:"form-content", class:"form-control", placeholder:"Content" %>
+    </div>
+    <%= submit_tag "Create", class: "btn btn-primary" %>
+<% end %>

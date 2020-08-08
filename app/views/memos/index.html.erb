@@ -1,14 +1,11 @@
-<div class="container">
-  <h1>Memo List</h1>
-  <a href="/new" class="btn btn-primary">新規メモ作成</a>
-  <% @memos.each do |memo| %>
-    <div class= "col-sm-4">
-      <div class="panel panel-success">
-        <div class="panel-heading"><%=memo.title%></div>
-        <div class="panel-body">
-          <%=memo.body%>
-        </div>
+<h1>Memo List</h1>
+<% @memos.each do |memo| %>
+  <div class= "col-sm-4">
+    <div class="panel panel-success">
+      <div class="panel-heading"><%=memo.title%></div>
+      <div class="panel-body">
+        <%=memo.body%>
       </div>
     </div>
-   <% end %>
-</div>
+  </div>
+<% end %>
